@@ -2,7 +2,7 @@
 
 Work Mode App is a productivity app built using principles of design for neuordivergent workers. Users can create prioritized To-Do lists and use Pomodoro timers to stay focused.
 
-**Link to project:** https://work-mode-app.herokuapp.com/
+<!--**Link to project:** https://work-mode-app.herokuapp.com/-->
 
 ## How It's Made:
 
