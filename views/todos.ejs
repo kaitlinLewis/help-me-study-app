@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <title>Work Mode</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <a href="/logout">Logout</a>
+    <main>
+        <h1>To accomplish:</h1>
+        <p>Remember your To-Do list is organized by priority!</p>
+        <ul>
+            <% todos.forEach( el=> { %>
+                <li class='todoItem' data-id='<%=el._id%>'>
+                    <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
+                    <span class='del'> Delete </span>
+                </li>
+                <% }) %>
+        </ul>
+
+        <form action="/todos/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Task" name='todoItem'>
+            <input type="Date" placeholder="Due date">
+            <input type="submit">
+        </form>
+    </main>
+
+
+
+
+
+    <aside class="pomodoroApp">
+
+        <div class="timer">
+            <div class="button-group mode-buttons" id="js-mode-buttons">
+                <button data-mode="pomodoro" class="button active mode-button" id="js-pomodoro">
+                    Pomodoro
+                </button>
+                <button data-mode="shortBreak" class="button mode-button" id="js-short-break">
+                    Short break
+                </button>
+                <button data-mode="longBreak" class="button mode-button" id="js-long-break">
+                    Long break
+                </button>
+            </div>
+            <div class="clock" id="js-clock">
+                <span id="js-minutes">25</span>
+                <span class="separator">:</span>
+                <span id="js-seconds">00</span>
+            </div>
+            <button class="main-button" data-action="start" id="js-btn">
+                Start
+            </button>
+        </div>
+    </aside>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
