@@ -1,13 +1,6 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+body {
+  background-color: #e3f6f5;
+  color: #393e46;
 }
 
 .pomodoroApp {
@@ -48,7 +41,7 @@ html {
   cursor: pointer;
   box-shadow: none;
   font-weight: 300;
-  color: black;
+  color: #393e46;
   border: 1px solid transparent;
   margin: 0px;
   border-radius: 4px;
@@ -57,7 +50,7 @@ html {
 }
 
 .mode-button.active {
-  border-color: black;
+  border-color: #393e46;
 }
 
 .main-button {
@@ -66,7 +59,7 @@ html {
   font-size: 22px;
   height: 55px;
   text-transform: uppercase;
-  color: hsl(175, 26%, 41%);
+  color: #393e46;
   font-weight: bold;
   width: 200px;
   background-color: white;

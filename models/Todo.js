@@ -5,6 +5,13 @@ const TodoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  highPriority: {
+    type: Boolean,
+    required: true,
+  },
+  dueDate: {
+    type: Date,
+  },
   completed: {
     type: Boolean,
     required: true,

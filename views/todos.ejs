@@ -34,7 +34,7 @@
 
         <main>
             <h1>To accomplish:</h1>
-            <p>Remember your To-Do list is organized by priority!</p>
+            <p>Remember to click on the task to mark it completed!</p>
             <ul>
                 <% todos.forEach( el=> { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
@@ -46,9 +46,15 @@
 
             <form action="/todos/createTodo" method='POST'>
                 <input type="text" placeholder="Enter Task" name='todoItem'>
-                <input type="Date" placeholder="Due date">
+                <input type="Date" placeholder="Due date" data-provide="datepicker">
                 <input type="submit">
             </form>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    This task is HIGH priority
+                </label>
+            </div>
         </main>
 
 

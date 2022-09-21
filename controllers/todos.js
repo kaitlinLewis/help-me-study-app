@@ -31,6 +31,19 @@ module.exports = {
       console.log(err);
     }
   },
+  markHighPriority: async (req, res) => {
+    try {
+      await Todo.findOneAndUpdate(
+        { _id: req.body.todoIdFromJSFile },
+        { highPriority: true }
+      );
+
+      console.log("High Priority");
+      res.json("High Priority");
+    } catch (err) {
+      console.log(err);
+    }
+  },
   markComplete: async (req, res) => {
     try {
       await Todo.findOneAndUpdate(
